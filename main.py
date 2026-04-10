@@ -40,10 +40,10 @@ if page=='Введение':
     )
     st.subheader('Исследование AI | 2025 Stack Overflow DeveloSper Survey')
 
-    df1 = pd.read_excel('data\Таблица данных для Streamlit.xlsx')
-    df2 = pd.read_excel('data\Разочарования в ИИ-инструментах_ данные.xlsx')
-    df3 = pd.read_excel('data\Доверие к ИИ-инструментам_ Анализ данных.xlsx')
-    df4 = pd.read_excel('data\фф.xlsx')
+    df1 = pd.read_excel('data/Таблица данных для Streamlit.xlsx')
+    df2 = pd.read_excel('data/Разочарования в ИИ-инструментах_ данные.xlsx')
+    df3 = pd.read_excel('data/Доверие к ИИ-инструментам_ Анализ данных.xlsx')
+    df4 = pd.read_excel('data/фф.xlsx')
 
 
 
@@ -145,8 +145,8 @@ elif page=='Эволюция, AI-ASSISTED CODING И VIBE ENGINEERING':
         """
     )
 
-    df5 = pd.read_excel('data\Данные по _Vibe coding_ для дашборда.xlsx')
-    df6 = pd.read_excel('data\Популярные ИИ-инструменты_ Рейтинг.xlsx')
+    df5 = pd.read_excel('data/Данные по _Vibe coding_ для дашборда.xlsx')
+    df6 = pd.read_excel('data/Популярные ИИ-инструменты_ Рейтинг.xlsx')
 
     df7 = pd.DataFrame(data={
         'Параметр': [
@@ -233,7 +233,7 @@ elif page=='Векторы угроз и кейсы':
     Отчет Veracode за 2025 год продемонстрировал, что 45% образцов кода, сгенерированного ИИ, проваливают базовые тесты на безопасность, включая такие критические уязвимости из списка OWASP, как межсайтовый скриптинг, который встречается в 2,74 раза чаще в ИИ-коде, и некорректная обработка паролей.
 
     ''')
-    df8 = pd.read_excel('data\Генерация данных для графика нейросетей.xlsx')
+    df8 = pd.read_excel('data/Генерация данных для графика нейросетей.xlsx')
     fig = px.scatter(df8, x='Дата релиза', y=['Синтаксис (Syntax pass rate)', 'Безопасность (Security pass rate)'], color_discrete_map=
     {
         'Синтаксис (Syntax pass rate)':'#a6bddb',
@@ -245,7 +245,7 @@ elif page=='Векторы угроз и кейсы':
     
     Самым проблемным языком для ИИ-ассистинга стал Java с 72% проваленных тестов. ''')
 
-    df9 = pd.read_excel('data\Данные о безопасности кода по языкам.xlsx')
+    df9 = pd.read_excel('data/Данные о безопасности кода по языкам.xlsx')
     df9.rename(columns={'Csharp':'C#'}, inplace=True)
     df_long = df9.melt(
         id_vars=['Дата релиза'],
